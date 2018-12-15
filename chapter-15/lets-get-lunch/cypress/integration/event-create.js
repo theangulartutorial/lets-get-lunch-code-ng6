@@ -36,7 +36,7 @@ describe('Event Create', () => {
         // Increment time by an hour
         .get('[aria-label="Add a hour"]').click()
         // Click the "Set" button
-        .get('.owl-dt-container-buttons button').last().click()
+        .get('.owl-dt-container-buttons button').last().wait(1000).click()
       // Update the radio button to "Yes"
       .get('#suggest-true').click()
       .get('button[type=submit]').click()
@@ -62,7 +62,7 @@ describe('Event Create', () => {
       .get('input[formControlName=endTime]').click()
         .get('.owl-dt-calendar-cell-today').click()
         .get('[aria-label="Minus a hour"]').click()
-        .get('.owl-dt-container-buttons button').last().click()
+        .get('.owl-dt-container-buttons button').last().wait(1000).click()
       .get('button[type=submit]').click()
       .get('.alert-danger')
         .should('be.visible')

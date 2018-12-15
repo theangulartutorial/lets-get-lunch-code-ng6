@@ -40,7 +40,7 @@ describe('Event Update', () => {
           .get('input[name=endTime]').click()
             .get('.owl-dt-calendar-cell-today').click()
             .get('[aria-label="Add a hour"]').click().click()
-            .get('.owl-dt-container-buttons button').last().click()
+            .get('.owl-dt-container-buttons button').last().wait(1000).click()
           .get('#suggest-true').click()
           .get('button[type=submit]').click()
           .get('.alert-success').should('be.visible')
