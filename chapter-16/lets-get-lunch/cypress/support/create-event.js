@@ -17,7 +17,7 @@ Cypress.Commands.add('createEvent', (name, location, opts = {}) => {
     .get('input[formControlName=endTime]').click()
       .get('.owl-dt-calendar-cell-today').click()
       .get('[aria-label="Add a hour"]').click()
-      .get('.owl-dt-container-buttons button').last().click();
+      .get('.owl-dt-container-buttons button').last().wait(1000).click();
 
   if (suggestLocations) {
     cy.get('#suggest-true').click();
