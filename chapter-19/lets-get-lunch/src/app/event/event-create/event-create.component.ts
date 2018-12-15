@@ -24,7 +24,6 @@ export class EventCreateComponent implements OnInit {
     private ngZone: NgZone,
     private eventsService: EventsService,
     private authService: AuthService) {
-    this.createForm();
   }
 
   ngOnInit() {
